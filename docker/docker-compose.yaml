@@ -20,8 +20,8 @@ services:
       timeout: 30s
       retries: 12
     links:
-      - conductor-elasticsearch:es
-      - conductor-redis:rs
+      - "conductor-elasticsearch:es"
+      - "conductor-redis:rs"
     depends_on:
       conductor-elasticsearch:
         condition: service_healthy
